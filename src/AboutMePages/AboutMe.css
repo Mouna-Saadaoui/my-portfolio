@@ -1,0 +1,93 @@
+.ab-page {
+    padding: 6rem 10%;
+    background: linear-gradient(to bottom right, #bebebb, #e4e4e4);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .ab-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+  
+  .ab-left {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .ab-left h1 {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    color: #111;
+  }
+  
+  .ab-left p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+
+  
+  .ab-right {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .ab-image {
+    width: 380px;
+    max-width: 100%;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Back to homepage button */
+  .back-btn {
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #111;
+    text-decoration: none;
+    font-weight: 500; 
+    transition: color 0.3s ease;
+  }
+  
+  .back-btn:hover {
+    color: #666;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .ab-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .ab-left h1 {
+      font-size: 2.2rem;
+    }
+  
+    .ab-left p {
+      font-size: 1rem;
+    }
+  
+    .ab-image {
+      width: 260px;
+      margin-top: 2rem;
+    }
+  
+    .about-buttons {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+  

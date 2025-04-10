@@ -1,0 +1,61 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background: linear-gradient(to right, #bebebe,#dfdede);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+  }
+  
+  /* Basic nav link styling */
+  .nav-link {
+    position: relative;
+    margin-left: 2rem;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    padding-bottom: 4px;
+    transition: color 0.3s;
+  }
+  
+  /* Hover effect */
+  .nav-link:hover {
+    color: #000000;
+  }
+  
+  /* Base underline (invisible) */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: transparent;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  /* Active link underline animation */
+  .nav-link.active::after {
+    background-color: #000000;
+    width: 100%;
+  }
+  /* Hover effect */
+.nav-link:hover {
+  color: #000000;
+}
+
+/* Underline on hover */
+.nav-link:hover::after {
+  background-color: #000000;
+  width: 100%;
+}
