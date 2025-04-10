@@ -43,11 +43,10 @@ function AboutMePage() {
           viewport={{ once: true }}
         >
           <img
-  src={`${process.env.PUBLIC_URL}/HeroSectionPics/Me.png`}
+  src={process.env.PUBLIC_URL + "/HeroSectionPics/Me.png"}
   alt="Mouna Avatar"
   className="ab-image"
 />
-
         </motion.div>
       </div>
 
