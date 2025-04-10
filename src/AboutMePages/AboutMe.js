@@ -43,10 +43,10 @@ function AboutMePage() {
           viewport={{ once: true }}
         >
           <img
-  src={process.env.PUBLIC_URL + "/HeroSectionPics/Me.png"}
-  alt="Mouna Avatar"
-  className="hero-img"
-/>
+            src={process.env.PUBLIC_URL + "/HeroSectionPics/Me.png"}
+            alt="Mouna Avatar"
+            className="ab-image"
+          />
         </motion.div>
       </div>
 
@@ -64,5 +64,6 @@ function AboutMePage() {
 }
 
 export default AboutMePage;
+
 
 
