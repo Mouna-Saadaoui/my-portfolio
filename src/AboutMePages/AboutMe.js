@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import './AboutMe.css';
-
+import './AboutMe.css'; 
+import MeImg from '../assets/Me.png';
 function AboutMePage() {
   return (
     <motion.div
@@ -42,11 +42,7 @@ function AboutMePage() {
           transition={{ duration: 0.7, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <img
-  src={process.env.PUBLIC_URL + "/HeroSectionPics/Me.png"}
-  alt="Mouna Avatar"
-  className="ab-image"
-/>
+          <img src={MeImg} alt="Mouna portrait" className="ab-image" />
         </motion.div>
       </div>
 
