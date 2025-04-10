@@ -22,9 +22,9 @@ function AboutMePage() {
           <h1>About Me</h1>
           <p>
             I'm Moona Saadaoui, a 21-year-old marketing and IT student at Tunis Business School.
-            I’ve gained experience in many areas—from branding and digital strategy to data storytelling,
+            I've gained experience in many areas—from branding and digital strategy to data storytelling,
             project coordination, and client communication. Whether through internships, global programs,
-            or hands-on projects, I’ve learned how to bring ideas to life with clarity and intention.
+            or hands-on projects, I've learned how to bring ideas to life with clarity and intention.
           </p>
           <p>
             Outside of my academic and professional life, I enjoy photography, drawing, and playing music—
@@ -43,10 +43,11 @@ function AboutMePage() {
           viewport={{ once: true }}
         >
           <img
-            src={process.env.PUBLIC_URL + "/HeroSectionPics/Me.png"}
-            alt="Mouna Avatar"
-            className="ab-image"
-          />
+  src={`${process.env.PUBLIC_URL}/HeroSectionPics/Me.png`}
+  alt="Mouna Avatar"
+  className="ab-image"
+/>
+
         </motion.div>
       </div>
 
