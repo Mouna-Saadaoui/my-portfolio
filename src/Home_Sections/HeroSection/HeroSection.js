@@ -5,7 +5,7 @@ import './HeroSection.css';
 
 function HeroSection() {
   return (
-    <section className="hero">
+    <section className="hero" id="home">
       <div className="hero-left">
         <motion.h1
           className="hero-name"
@@ -41,13 +41,14 @@ function HeroSection() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.3 }}
       >
-        <img src="/HeroSectionPics/Me.png" alt="Mouna Avatar" className="hero-img" />
+        <img
+  src={process.env.PUBLIC_URL + "/HeroSectionPics/Me.png"}
+  alt="Mouna Avatar"
+  className="hero-img"
+/>
       </motion.div>
     </section>
   );
 }
 
 export default HeroSection;
-
-
-
