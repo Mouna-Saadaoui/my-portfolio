@@ -13,7 +13,7 @@ function HeroSection() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Hell, I'm <span className="typewriter">Mouna</span>
+          Hello, I'm <span className="typewriter">Mouna</span>
         </motion.h1>
 
         <motion.p
