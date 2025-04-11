@@ -41,11 +41,8 @@ function HeroSection() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.3 }}
       >
-        <img
-  src={process.env.PUBLIC_URL + "/Me.png"}
-  alt="Mouna Avatar"
-  className="hero-img"
-/>
+        <img src={`${process.env.PUBLIC_URL}/Me.png`} alt="Me" />
+
       </motion.div>
     </section>
   );
