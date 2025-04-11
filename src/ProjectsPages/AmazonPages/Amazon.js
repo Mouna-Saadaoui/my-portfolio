@@ -45,12 +45,10 @@ function AmazonPage() {
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <motion.img
-            src="/Amazon.jpg"
-            alt="Amazon Business Intelligence"
-            className="amazon-image"
-            whileHover={{ scale: 1.05, rotate: -1 }}
-            transition={{ type: 'spring', stiffness: 200 }}
-          />
+  src={process.env.PUBLIC_URL + "/Amazon.jpg"}
+  alt="Amazon"
+  className="Amazon-img"
+/>
         </motion.div>
       </div>
 
