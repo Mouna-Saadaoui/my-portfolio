@@ -1,14 +1,18 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import './global-mobile.css';
-import Layout from './Layout/Layout';
 
+import Layout from './Layout/Layout';
+import MobileLayout from './Layout/MobileLayout';
+import useIsMobile from './hooks/useIsMobile'; // ✅ import the hook
+
+// Sections
 import HeroSection from './Home_Sections/HeroSection/HeroSection';
 import SkillsSection from './Home_Sections/SkillsSection/SkillsSection';
 import ProjectsSection from './Home_Sections/ProjectsSection/ProjectsSection';
 import Resume from './Home_Sections/Resume/Resume';
 import ContactSection from './Home_Sections/ContactSection/ContactSection';
 
+// Pages
 import HerbeosPage from './ProjectsPages/Herbeos/HerbeosPages/Herbeos';
 import LilasPage from './ProjectsPages/LilasPages/Lilas';
 import BenYaghlanePage from './ProjectsPages/BenYaghlanePages/BenYaghlane';
@@ -17,9 +21,13 @@ import EnergyHivePage from './ProjectsPages/EnergyHivePages/EnergyHive';
 import AboutMePage from './AboutMePages/AboutMe';
 
 function App() {
+  const isMobile = useIsMobile();
+
+  const LayoutComponent = isMobile ? MobileLayout : Layout;
+
   return (
     <Router>
-      <Layout>
+      <LayoutComponent>
         <div className="main-content">
           <Routes>
             <Route
@@ -42,12 +50,14 @@ function App() {
             <Route path="/aboutme/aboutme" element={<AboutMePage />} />
           </Routes>
         </div>
-      </Layout>
+      </LayoutComponent>
     </Router>
   );
 }
 
 export default App;
+
+
 
 
 
