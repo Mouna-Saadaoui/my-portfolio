@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './AboutMe.css'; 
-import MeImg from '../assets/Me.png';
 function AboutMePage() {
   return (
     <motion.div
@@ -31,18 +30,21 @@ function AboutMePage() {
             creative passions that keep me grounded and inspired.
           </p>
           <p>
-            Curious, versatile, and driven by impact, I’m always exploring new ways to grow and create with purpose.
+            Curious, versatile, and driven by impact, I'm always exploring new ways to grow and create with purpose.
           </p>
         </motion.div>
 
         <motion.div
           className="ab-right"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
         >
-          <img src={MeImg} alt="Mouna portrait" className="ab-image" />
+        <img
+  src={process.env.PUBLIC_URL + "/Me.png"}
+  alt="Mouna Avatar"
+  className="ab-img"
+/>
         </motion.div>
       </div>
 

@@ -42,7 +42,7 @@ function HeroSection() {
         transition={{ duration: 1, delay: 0.3 }}
       >
         <img
-  src={process.env.PUBLIC_URL + "/HeroSectionPics/Me.png"}
+  src={process.env.PUBLIC_URL + "/Me.png"}
   alt="Mouna Avatar"
   className="hero-img"
 />
