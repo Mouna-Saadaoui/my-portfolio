@@ -4,12 +4,13 @@ import './Resume.css';
 
 function Resume() {
   const handleDownloadError = () => {
-    console.error("Failed to download resume."); // Or show a user-friendly message
+    console.error("Failed to download resume.");
   };
 
   return (
     <section className="resume-section" id="resume">
       <motion.h2
+        className="resume-title"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -19,14 +20,14 @@ function Resume() {
       </motion.h2>
 
       <motion.a
-        href="/Resume Mouna Saadaoui.pdf" // Ensure this file is in the public folder
+        href="/Resume Mouna Saadaoui.pdf"
         className="resume-btn"
         aria-label="Download Mouna Saadaoui's Resume"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         target="_blank"
         rel="noopener noreferrer"
-        download="Resume Mouna Saadaoui.pdf" // Explicit filename for download
+        download="Resume Mouna Saadaoui.pdf"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -40,3 +41,4 @@ function Resume() {
 }
 
 export default Resume;
+

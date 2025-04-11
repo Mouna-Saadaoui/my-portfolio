@@ -1,6 +1,6 @@
 // App.js
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // ✅ Use HashRouter
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Layout from './Layout/Layout';
 

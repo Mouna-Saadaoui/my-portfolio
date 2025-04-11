@@ -6,17 +6,24 @@ import './Contact.css';
 function Contact() {
   return (
     <section className="contact-section" id="contact">
-      <motion.h2
+      <motion.div
+        className="contact-title-container"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Let's Connect
-      </motion.h2>
+        <h2 className="contact-title">
+          <b>Let's connect</b>
+          <img
+            src={`${process.env.PUBLIC_URL}/MeLogo.png`}
+            alt="Logo"
+            className="contact-logo"
+          />
+        </h2>
+      </motion.div>
 
       <div className="icon-links">
-        {/* ✅ Email link using Gmail compose */}
         <motion.a
           href="https://mail.google.com/mail/?view=cm&fs=1&to=mouna.saadaoui202@gmail.com"
           target="_blank"
@@ -28,7 +35,6 @@ function Contact() {
           <FaEnvelope />
         </motion.a>
 
-        {/* ✅ LinkedIn */}
         <motion.a
           href="https://www.linkedin.com/in/mouna-saadaoui-2524a6312/"
           target="_blank"
@@ -45,4 +51,3 @@ function Contact() {
 }
 
 export default Contact;
-
