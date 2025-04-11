@@ -21,7 +21,7 @@ function AmazonPage() {
         >
           <h1>Optimizing Amazon Through Business Intelligence</h1>
           <p>
-          This project focuses on building a data warehouse for Amazon to optimize operations and support strategic decision-making. It includes data gathering, dimensional modeling, ETL development using Python, and data visualization in Power BI. Key insights highlight product performance, regional trends, and customer behavior, aiming to improve efficiency, marketing, and resource allocation.
+            This project focuses on building a data warehouse for Amazon to optimize operations and support strategic decision-making. It includes data gathering, dimensional modeling, ETL development using Python, and data visualization in Power BI. Key insights highlight product performance, regional trends, and customer behavior, aiming to improve efficiency, marketing, and resource allocation.
           </p>
 
           <p className="amazon-note">
@@ -30,7 +30,7 @@ function AmazonPage() {
               href="https://www.linkedin.com/in/mouna-saadaoui-2524a6312/"
               target="_blank"
               rel="noopener noreferrer"
-              className="herbeos-linkedin"
+              className="amazon-linkedin"
             >
               <FaLinkedin className="linkedin-icon" />
               <span className="linkedin-handle">LinkedIn profile</span>
@@ -45,10 +45,12 @@ function AmazonPage() {
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <motion.img
-  src={process.env.PUBLIC_URL + "/Amazon.jpg"}
-  alt="Amazon"
-  className="Amazon-img"
-/>
+            src={`${process.env.PUBLIC_URL}/Amazon.jpg`}
+            alt="Amazon Visual"
+            className="amazon-image"
+            whileHover={{ scale: 1.05, rotate: -1 }}
+            transition={{ type: 'spring', stiffness: 200 }}
+          />
         </motion.div>
       </div>
 

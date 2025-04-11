@@ -4,7 +4,10 @@
  .App {
   text-align: center;
 }
-
+section:first-of-type {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

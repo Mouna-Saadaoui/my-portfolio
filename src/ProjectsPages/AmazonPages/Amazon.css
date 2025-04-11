@@ -64,13 +64,16 @@
   }
   
   .amazon-image {
-    width: 2000px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 500px;
     border-radius: 1.2rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     transition: transform 0.4s ease;
     cursor: pointer;
+    height: auto;
+    object-fit: cover;
   }
+  
   
   .amazon-image:hover {
     transform: scale(1.05) rotate(-1deg);

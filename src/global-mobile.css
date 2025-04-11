@@ -1,87 +1,64 @@
-/* Global Mobile Styles */
-
-/* Make all sections responsive */
-section {
-  padding: 2rem 1rem;
+/* ===== GLOBAL LAYOUT ===== */
+.main-content {
+  padding-top: 0;
 }
 
-h1, h2, h3 {
-  font-size: 1.6rem;
-  text-align: center;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.6;
-  text-align: center;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Make buttons scale well on small screens */
-a, button {
-  font-size: 1rem;
-  padding: 0.7rem 1.2rem;
-  border-radius: 999px;
-  text-align: center;
-  display: inline-block;
-}
-
-/* Responsive Flex Fixes */
-.ab-container,
-.herbeos-container,
-.lilas-container,
-.amazon-container,
-.energyhive-container {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-/* Responsive Navbar */
+/* Navbar Defaults */
 .navbar {
   flex-direction: column;
-  padding: 1rem 1rem;
+  padding: 1rem;
   align-items: center;
   background: linear-gradient(to right, #bebebe, #dfdede);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: static;
 }
 
-.navbar-left {
-  margin-bottom: 1rem;
-  text-align: center;
+/* Fixed navbar on desktop */
+@media (min-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  .main-content {
+    padding-top: 80px; /* Matches navbar height */
+  }
 }
 
-.navbar-right {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+/* Cleanup spacing issue */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section:first-of-type {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+} 
+.main-content {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+/* Responsive Navbar Behavior */
+.navbar {
+  position: static;
 }
 
-.nav-link {
-  font-size: 0.95rem;
+@media (min-width: 769px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .main-content {
+    padding-top: 80px; /* only needed when navbar is fixed */
+  }
 }
 
-/* Footer matches navbar */
-.footer-top {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1rem;
-}
 
-.footer-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
 
-.footer-link {
-  font-size: 0.9rem;
-  color: #000;
-}
