@@ -20,14 +20,14 @@ function Resume() {
       </motion.h2>
 
       <motion.a
-        href="/Resume Mouna Saadaoui.pdf"
+        href="/ResumeMounaSaadaoui.pdf"
         className="resume-btn"
         aria-label="Download Mouna Saadaoui's Resume"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         target="_blank"
         rel="noopener noreferrer"
-        download="Resume Mouna Saadaoui.pdf"
+        download="ResumeMounaSaadaoui.pdf"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
