@@ -21,7 +21,12 @@ function LilasPage() {
         >
           <h1>Expanding Lilas Beyond Borders</h1>
           <p>
-          This project analyzes the international expansion strategy of Lilas, a Tunisian hygiene brand. It identifies Italy as the most suitable market based on economic potential, consumer demand, and alignment with Lilas’s eco-friendly values. The project outlines a complete marketing plan using the 4 Ps—product standardization, competitive pricing, indirect distribution, and digital promotion—to help Lilas successfully enter and grow in the Italian market.          </p>
+            This project analyzes the international expansion strategy of Lilas, a Tunisian hygiene brand.
+            It identifies Italy as the most suitable market based on economic potential, consumer demand,
+            and alignment with Lilas's eco-friendly values. The project outlines a complete marketing plan
+            using the 4 Ps—product standardization, competitive pricing, indirect distribution, and digital promotion—
+            to help Lilas successfully enter and grow in the Italian market.
+          </p>
 
           <p className="lilas-note">
             For full access to my reports and work, please check my{' '}
@@ -33,8 +38,7 @@ function LilasPage() {
             >
               <FaLinkedin className="linkedin-icon" />
               <span className="linkedin-handle">LinkedIn profile</span>
-            </a>
-            .
+            </a>.
           </p>
         </motion.div>
 
@@ -45,7 +49,7 @@ function LilasPage() {
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <motion.img
-            src="/Lilas.png"
+            src={`${process.env.PUBLIC_URL}/Lilas.png`}
             alt="Lilas Visual"
             className="lilas-image"
             whileHover={{ scale: 1.05, rotate: -1 }}
@@ -60,4 +64,5 @@ function LilasPage() {
 }
 
 export default LilasPage;
+
 

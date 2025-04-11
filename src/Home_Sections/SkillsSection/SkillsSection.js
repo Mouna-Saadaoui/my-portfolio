@@ -8,7 +8,7 @@ function SkillsSection() {
     {
       icon: <FaLightbulb />,
       description: 'I craft marketing strategies that connect brands with people.',
-      items: ['Marketing Communication', 'Digital Campaigns', 'Brand Positioning', 'Market Research'],
+      items: ['Marketing Communication','Social Media Marketing', 'Digital Campaigns', 'Brand Positioning', 'Market Research'],
     },
     {
       icon: <FaTools />,
@@ -18,7 +18,7 @@ function SkillsSection() {
     {
       icon: <FaCode />,
       description: 'I have a foundation in code and systems.',
-      items: ['React.Js', 'SQL', 'HTML/CSS', 'Python', 'Linux'],
+      items: ['React.Js', 'SQL', 'HTML/CSS','JS', 'Python','C', 'Linux'],
     },
     {
       icon: <FaLanguage />,

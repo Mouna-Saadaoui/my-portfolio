@@ -2,14 +2,17 @@ import React from 'react';
 import './Footer.css';
 import { FaEnvelope, FaLinkedin } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link'; // for smooth scrolling
 
 function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-top">
+        {/* Contact Icons */}
         <div className="footer-icons">
+          {/* Opens Gmail Compose */}
           <a
-            href="mailto:mouna.saadaoui202@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=mouna.saadaoui202@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-icon"
@@ -26,23 +29,25 @@ function Footer() {
           </a>
         </div>
 
+        {/* Navigation Links */}
         <nav className="footer-nav">
-          <a href="/" className="footer-link">Home</a>
-          <a href="#skills" className="footer-link">Skills</a>
-          <a href="#projects" className="footer-link">Projects</a>
-          <a href="#resume" className="footer-link">Resume</a>
+          <HashLink smooth to="/#home" className="footer-link">Home</HashLink>
+          <HashLink smooth to="/#skills" className="footer-link">Skills</HashLink>
+          <HashLink smooth to="/#projects" className="footer-link">Projects</HashLink>
+          <HashLink smooth to="/#resume" className="footer-link">Resume</HashLink>
           <NavLink to="/aboutme/aboutme" className="footer-link">About Me</NavLink>
-          <a href="#contact" className="footer-link">Contact</a>
+          <HashLink smooth to="/#contact" className="footer-link">Contact</HashLink>
         </nav>
       </div>
 
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Moona Saadaoui. All rights reserved.</p>
-        <p className="footer-tagline">Made with vision & caffeine </p>
+        <p className="footer-tagline">Made with vision & caffeine</p>
       </div>
     </footer>
   );
 }
 
 export default Footer;
+
 

@@ -1,18 +1,17 @@
 // App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // ✅ Use HashRouter
 
-import Layout from './Layout/Layout'; // this file should be src/Layout.js
+import Layout from './Layout/Layout';
 
-// Import homepage sections:
+// Homepage sections
 import HeroSection from './Home_Sections/HeroSection/HeroSection';
 import SkillsSection from './Home_Sections/SkillsSection/SkillsSection';
 import ProjectsSection from './Home_Sections/ProjectsSection/ProjectsSection';
 import Resume from './Home_Sections/Resume/Resume';
-import ContactSection from './Home_Sections/ContactSection/ContactSection'; 
+import ContactSection from './Home_Sections/ContactSection/ContactSection';
 
-
-// Import project pages:
+// Project pages
 import HerbeosPage from './ProjectsPages/Herbeos/HerbeosPages/Herbeos';
 import LilasPage from './ProjectsPages/LilasPages/Lilas';
 import BenYaghlanePage from './ProjectsPages/BenYaghlanePages/BenYaghlane';
@@ -50,4 +49,5 @@ function App() {
 }
 
 export default App;
+
 

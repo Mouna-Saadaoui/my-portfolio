@@ -46,15 +46,16 @@ function HerbeosPage() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-        >
-          <motion.img
-            src="/Herbeos.png"
+        >  
+        <motion.img
+            src={`${process.env.PUBLIC_URL}/Herbeos.png`}
             alt="Herbeos Visual"
             className="herbeos-image"
             whileHover={{ scale: 1.05, rotate: -1 }}
             transition={{ type: 'spring', stiffness: 200 }}
           />
         </motion.div>
+         
       </div>
 
       <Link to="/" className="back-btn">← Back to Projects</Link>

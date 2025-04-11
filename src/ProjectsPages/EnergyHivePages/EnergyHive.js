@@ -45,8 +45,8 @@ function EnergyHivePage() {
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <motion.img
-            src="/energyhive.png"
-            alt="EnergyHive Project Visual"
+src={`${process.env.PUBLIC_URL}/energyhive.png`}
+    alt="EnergyHive Project Visual"
             className="energyhive-image"
             whileHover={{ scale: 1.05, rotate: -1 }}
             transition={{ type: 'spring', stiffness: 200 }}

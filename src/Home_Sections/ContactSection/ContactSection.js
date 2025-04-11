@@ -10,13 +10,15 @@ function Contact() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        viewport={{ once: true }}>
+        viewport={{ once: true }}
+      >
         Let's Connect
       </motion.h2>
 
       <div className="icon-links">
+        {/* ✅ Email link using Gmail compose */}
         <motion.a
-          href="mailto:mouna.saadaoui202@gmail.com" // Replace with your email
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=mouna.saadaoui202@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.2 }}
@@ -26,8 +28,9 @@ function Contact() {
           <FaEnvelope />
         </motion.a>
 
+        {/* ✅ LinkedIn */}
         <motion.a
-          href="https://www.linkedin.com/in/mouna-saadaoui-2524a6312/" // Replace with your LinkedIn URL
+          href="https://www.linkedin.com/in/mouna-saadaoui-2524a6312/"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.2 }}
@@ -42,3 +45,4 @@ function Contact() {
 }
 
 export default Contact;
+

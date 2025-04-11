@@ -2,7 +2,7 @@
     "name": "my-portfolio",
     "version": "1.0.0",
     "private": true,
-    "homepage": "https://Mouna-Saadaoui.github.io/my-portfolio",
+    "homepage": "https://mouna-saadaoui.github.io/my-portfolio",
     "description": "Mouna Saadaoui's personal portfolio",
     "dependencies": {
         "framer-motion": "^10.12.16",
