@@ -1,0 +1,87 @@
+/* Global Mobile Styles */
+
+/* Make all sections responsive */
+section {
+  padding: 2rem 1rem;
+}
+
+h1, h2, h3 {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make buttons scale well on small screens */
+a, button {
+  font-size: 1rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Responsive Flex Fixes */
+.ab-container,
+.herbeos-container,
+.lilas-container,
+.amazon-container,
+.energyhive-container {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Responsive Navbar */
+.navbar {
+  flex-direction: column;
+  padding: 1rem 1rem;
+  align-items: center;
+  background: linear-gradient(to right, #bebebe, #dfdede);
+}
+
+.navbar-left {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.navbar-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+}
+
+/* Footer matches navbar */
+.footer-top {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-link {
+  font-size: 0.9rem;
+  color: #000;
+}

@@ -1,7 +1,7 @@
 // App.js
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-
+import './global-mobile.css';
 import Layout from './Layout/Layout';
 
 // Homepage sections
