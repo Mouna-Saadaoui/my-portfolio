@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './AboutMe.css'; 
+
 function AboutMePage() {
   return (
     <motion.div
@@ -40,8 +41,11 @@ function AboutMePage() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-                <img src={`${process.env.PUBLIC_URL}/Me.png`} alt="Me" />
-
+          <img
+            src={`${process.env.PUBLIC_URL}/HeroSectionPics/Me.png`}
+            alt="Me"
+            className="ab-image"
+          />
         </motion.div>
       </div>
 
@@ -59,6 +63,7 @@ function AboutMePage() {
 }
 
 export default AboutMePage;
+
 
 
 
