@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import './EnergyHive.css';
@@ -55,7 +55,7 @@ src={`${process.env.PUBLIC_URL}/energyhive.webp`}
         </motion.div>
       </div>
 
-      <Link to="/" className="back-btn">← Back to Projects</Link>
+      <HashLink smooth to="/#projects" className="back-btn">← Back to Projects</HashLink>
     </motion.div>
   );
 }
