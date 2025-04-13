@@ -45,8 +45,9 @@ function BenYaghlanePage() {
           transition={{ delay: 0.4, duration: 0.6 }}
         >
         <motion.img
-            src={`${process.env.PUBLIC_URL}/BY.png`}
-            alt="Ben Yaghlane Visual"
+            src={`${process.env.PUBLIC_URL}/BY.webp`}
+            alt="Ben Yaghlane Visual" 
+            loading="lazy"
             className="by-image"
             whileHover={{ scale: 1.05, rotate: -1 }}
             transition={{ type: 'spring', stiffness: 200 }}

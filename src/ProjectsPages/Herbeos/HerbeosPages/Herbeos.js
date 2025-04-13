@@ -48,8 +48,9 @@ function HerbeosPage() {
           transition={{ delay: 0.4, duration: 0.6 }}
         >  
         <motion.img
-            src={`${process.env.PUBLIC_URL}/Herbeos.png`}
-            alt="Herbeos Visual"
+            src={`${process.env.PUBLIC_URL}/Herbeos.webp`}
+            alt="Herbeos Visual" 
+            loading="lazy"
             className="herbeos-image"
             whileHover={{ scale: 1.05, rotate: -1 }}
             transition={{ type: 'spring', stiffness: 200 }}

@@ -2,7 +2,7 @@ import React from 'react';
 import './Footer.css';
 import { FaEnvelope, FaLinkedin } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link'; // for smooth scrolling
+import { HashLink } from 'react-router-hash-link';
 
 function Footer() {
   return (
@@ -10,7 +10,6 @@ function Footer() {
       <div className="footer-top">
         {/* Contact Icons */}
         <div className="footer-icons">
-          {/* Opens Gmail Compose */}
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=mouna.saadaoui202@gmail.com"
             target="_blank"
@@ -49,5 +48,6 @@ function Footer() {
 }
 
 export default Footer;
+
 
 

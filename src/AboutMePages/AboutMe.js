@@ -42,8 +42,9 @@ function AboutMePage() {
           transition={{ duration: 1, delay: 0.3 }}
         >
           <img
-            src={`${process.env.PUBLIC_URL}/Me.png`}
-            alt="Me"
+            src={`${process.env.PUBLIC_URL}/Me.webp`}
+            alt="Me" 
+            loading="lazy"
             className="ab-image"
           />
         </motion.div>

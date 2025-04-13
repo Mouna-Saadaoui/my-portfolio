@@ -49,8 +49,9 @@ function LilasPage() {
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <motion.img
-            src={`${process.env.PUBLIC_URL}/Lilas.png`}
-            alt="Lilas Visual"
+            src={`${process.env.PUBLIC_URL}/Lilas.webp`}
+            alt="Lilas Visual" 
+            loading="lazy"
             className="lilas-image"
             whileHover={{ scale: 1.05, rotate: -1 }}
             transition={{ type: 'spring', stiffness: 200 }}

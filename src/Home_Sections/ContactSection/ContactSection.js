@@ -16,8 +16,9 @@ function Contact() {
         <h2 className="contact-title">
           <b>Let's connect</b>
           <img
-            src={`${process.env.PUBLIC_URL}/MeLogo.png`}
-            alt="Logo"
+            src={`${process.env.PUBLIC_URL}/MeLogo.webp`} 
+            alt="Logo" 
+            loading="lazy"
             className="contact-logo"
           />
         </h2>
