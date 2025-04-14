@@ -3,8 +3,12 @@ import { HashLink } from 'react-router-hash-link';
 import { FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import './Amazon.css';
+import { useLocation } from 'react-router-dom';
 
 function AmazonPage() {
+  const location = useLocation();
+  const fromIndex = location.state?.fromIndex ?? 0;
+
   return (
     <motion.div
       className="amazon-page"
@@ -46,7 +50,7 @@ function AmazonPage() {
         >
           <motion.img
             src={`${process.env.PUBLIC_URL}/Amazon.webp`}
-            alt="Amazon Visual" 
+            alt="Amazon Visual"
             loading="lazy"
             className="amazon-image"
             whileHover={{ scale: 1.05, rotate: -1 }}
@@ -55,10 +59,19 @@ function AmazonPage() {
         </motion.div>
       </div>
 
-      <HashLink smooth to="/#projects" className="back-btn">← Back to Projects</HashLink>
+      <HashLink
+  smooth
+  to={`/#projects-${fromIndex}`}
+  scroll={(el) => el?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+  className="back-btn"
+>
+  ← Back to Projects
+</HashLink>
+
     </motion.div>
   );
 }
 
 export default AmazonPage;
+
 

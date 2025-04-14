@@ -3,8 +3,12 @@ import { HashLink } from 'react-router-hash-link';
 import { FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import './Lilas.css';
+import { useLocation } from 'react-router-dom';
 
 function LilasPage() {
+  const location = useLocation();
+  const fromIndex = location.state?.fromIndex || 0;
+
   return (
     <motion.div
       className="lilas-page"
@@ -59,11 +63,14 @@ function LilasPage() {
         </motion.div>
       </div>
 
-      <HashLink smooth to="/#projects" className="back-btn">← Back to Projects</HashLink>
+      <HashLink smooth to={`/#projects-${fromIndex}`} className="back-btn">
+        ← Back to Projects
+      </HashLink>
     </motion.div>
   );
 }
 
 export default LilasPage;
+
 
 

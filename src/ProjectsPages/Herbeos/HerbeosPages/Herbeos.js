@@ -3,8 +3,12 @@ import { HashLink } from 'react-router-hash-link';
 import { FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import './Herbeos.css';
+import { useLocation } from 'react-router-dom';
 
 function HerbeosPage() {
+  const location = useLocation();
+  const fromIndex = location.state?.fromIndex || 0;
+
   return (
     <motion.div
       className="herbeos-page"
@@ -47,7 +51,7 @@ function HerbeosPage() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >  
-        <motion.img
+          <motion.img
             src={`${process.env.PUBLIC_URL}/Herbeos.webp`}
             alt="Herbeos Visual" 
             loading="lazy"
@@ -56,12 +60,21 @@ function HerbeosPage() {
             transition={{ type: 'spring', stiffness: 200 }}
           />
         </motion.div>
-         
       </div>
 
-      <HashLink smooth to="/#projects" className="back-btn">← Back to Projects</HashLink>
+      <HashLink
+  smooth
+  to={`/#projects-${fromIndex}`}
+  scroll={(el) => el?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+  className="back-btn"
+>
+  ← Back to Projects
+</HashLink>
+
+
     </motion.div>
   );
 }
 
 export default HerbeosPage;
+

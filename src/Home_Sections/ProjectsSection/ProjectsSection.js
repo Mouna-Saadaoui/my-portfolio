@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion'; 
-import './ProjectsSection.css';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import './ProjectsSection.css';
 
 const projects = [
   {
@@ -17,15 +18,13 @@ const projects = [
   {
     title: 'Ben Yaghlane & the Tunisian Consumer: Where Personality Meets Purchase',
     link: '/projects/benyaghlane',
-    reflection: "This project deepened my understanding of how lifestyle, identity, and brand personality influence consumer choices in a culturally rooted market."
-
-    
+    reflection: "This project deepened my understanding of how lifestyle, identity, and brand personality influence consumer choices in a culturally rooted market.",
   },
   {
     title: 'Optimizing Amazon Operations Through Business Intelligence and Data Warehousing.',
-  link: '/projects/amazon',
+    link: '/projects/amazon',
     reflection: "This project helped me develop skills in multidimensional modeling, ETL design, and extracting data-driven insights for strategic decision-making.",
-  }, 
+  },
   {
     title: 'EnergyHive: A Strategic Business Model for Smarter Solar Energy Management',
     link: '/projects/energyhive',
@@ -58,7 +57,19 @@ const itemVariants = {
 };
 
 function ProjectsSection() {
+  const location = useLocation();
   const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash && hash.startsWith('#projects-')) {
+      const num = parseInt(hash.replace('#projects-', ''), 10);
+      if (!isNaN(num) && num >= 0 && num < projects.length) {
+        setIndex(num);
+      }
+    }
+  }, [location]);
+  
 
   const nextProject = () => {
     setIndex((prev) => (prev + 1) % projects.length);
@@ -68,23 +79,16 @@ function ProjectsSection() {
     setIndex((prev) => (prev - 1 + projects.length) % projects.length);
   };
 
+  const currentProject = projects[index];
+  if (!currentProject) return null;
+
   return (
     <section className="projects-section" id="projects">
-      <motion.h2
-        className="projects-title"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}>
+      <motion.h2 className="projects-title" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
         Projects I'm Proud Of
       </motion.h2>
 
-      <motion.p
-        className="projects-subheading"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.5}}
-      >
+      <motion.p className="projects-subheading" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
         Each one has a piece of my story.
       </motion.p>
 
@@ -94,28 +98,27 @@ function ProjectsSection() {
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
+            id={`projects-${index}`}
             className="project-slide"
             initial={{ opacity: 0, x: 100, rotateY: 10, scale: 0.95 }}
             animate={{ opacity: 1, x: 0, rotateY: 0, scale: 1 }}
             exit={{ opacity: 0, x: -100, rotateY: -10, scale: 0.95 }}
             transition={{ duration: 0.7, ease: 'easeInOut' }}
           >
-            <motion.div
-              variants={contentVariants}
-              initial="hidden"
-              animate="visible"
-              className="project-content"
-            >
-              <motion.h3 variants={itemVariants}>{projects[index].title}</motion.h3>
-              <motion.p className="project-reflection" variants={itemVariants}>{projects[index].reflection}</motion.p>
-              {projects[index].title !== 'Personal Portfolio' && (
-  <motion.div variants={itemVariants}>
-    <Link to={projects[index].link} className="project-btn">
-      View Project
-    </Link>
-  </motion.div>
-)}
+            <motion.div variants={contentVariants} initial="hidden" animate="visible" className="project-content">
+              <motion.h3 variants={itemVariants}>{currentProject.title}</motion.h3>
+              <motion.p className="project-reflection" variants={itemVariants}>{currentProject.reflection}</motion.p>
+              {currentProject.title !== 'Personal Portfolio' && (
+                <motion.div variants={itemVariants}>
+                  <Link
+  to={{ pathname: currentProject.link, state: { fromIndex: index } }}
+  className="project-btn"
+>
+  View Project
+</Link>
 
+                </motion.div>
+              )}
               <motion.p className="slide-indicator" variants={itemVariants}>
                 {index + 1} / {projects.length}
               </motion.p>
@@ -130,6 +133,13 @@ function ProjectsSection() {
 }
 
 export default ProjectsSection;
+
+
+
+
+
+
+
 
 
 

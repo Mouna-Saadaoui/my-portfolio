@@ -3,8 +3,12 @@ import { HashLink } from 'react-router-hash-link';
 import { FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import './EnergyHive.css';
+import { useLocation } from 'react-router-dom';
 
 function EnergyHivePage() {
+  const location = useLocation();
+  const fromIndex = location.state?.fromIndex || 0;
+
   return (
     <motion.div
       className="energyhive-page"
@@ -45,9 +49,9 @@ function EnergyHivePage() {
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <motion.img
-src={`${process.env.PUBLIC_URL}/energyhive.webp`}
-    alt="EnergyHive Project Visual" 
-    loading="lazy"
+            src={`${process.env.PUBLIC_URL}/energyhive.webp`}
+            alt="EnergyHive Project Visual"
+            loading="lazy"
             className="energyhive-image"
             whileHover={{ scale: 1.05, rotate: -1 }}
             transition={{ type: 'spring', stiffness: 200 }}
@@ -55,10 +59,19 @@ src={`${process.env.PUBLIC_URL}/energyhive.webp`}
         </motion.div>
       </div>
 
-      <HashLink smooth to="/#projects" className="back-btn">← Back to Projects</HashLink>
+      <HashLink
+  smooth
+  to={`/#projects-${fromIndex}`}
+  scroll={(el) => el?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+  className="back-btn"
+>
+  ← Back to Projects
+</HashLink>
+
     </motion.div>
   );
 }
 
 export default EnergyHivePage;
+
 

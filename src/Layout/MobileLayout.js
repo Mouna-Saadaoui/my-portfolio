@@ -1,4 +1,4 @@
-// MobileLayout.jsx
+// src/Layout/MobileLayout.jsx
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
@@ -8,14 +8,17 @@ import './MobileLayout.css';
 
 function MobileLayout({ children }) {
   const [isOpen, setIsOpen] = useState(false);
+
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <div className="mobile-wrapper"> {/* full-page flex container */}
+    <div className="mobile-wrapper">
       <header className="mobile-navbar">
-        <div className="mobile-logo">My Portfolio.</div>
-        <button className="hamburger-btn" onClick={toggleMenu}>
+      <HashLink to="/#home" className="mobile-logo" onClick={closeMenu}>
+  My Portfolio.
+</HashLink>
+        <button className="hamburger-btn" onClick={toggleMenu} aria-label="Toggle Menu">
           {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
         </button>
       </header>
@@ -33,10 +36,16 @@ function MobileLayout({ children }) {
         {children}
       </main>
 
-      <Footer /> {/*  existing footer here */}
+      <Footer />
     </div>
   );
 }
 
 export default MobileLayout;
+
+
+
+
+
+
 
