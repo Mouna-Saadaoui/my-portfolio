@@ -21,7 +21,7 @@ function AboutMePage() {
         >
           <h1>About Me</h1>
           <p>
-            I'm Moona Saadaoui, a 21-year-old marketing and IT student at Tunis Business School.
+            I'm Mouna Saadaoui, a 21-year-old marketing and IT student at Tunis Business School.
             I've gained experience in many areas—from branding and digital strategy to data storytelling,
             project coordination, and client communication. Whether through internships, global programs,
             or hands-on projects, I've learned how to bring ideas to life with clarity and intention.

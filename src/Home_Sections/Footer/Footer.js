@@ -40,7 +40,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Moona Saadaoui. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Mouna Saadaoui. All rights reserved.</p>
         <p className="footer-tagline">Made with vision & caffeine</p>
       </div>
     </footer>
