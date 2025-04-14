@@ -18,7 +18,7 @@ function SkillsSection() {
     {
       icon: <FaCode />,
       description: 'I have a foundation in code and systems.',
-      items: ['React.Js', 'SQL', 'HTML/CSS','JS', 'Python','C', 'Linux'],
+      items: ['React.Js', 'SQL', 'HTML/CSS','JS', 'Python','C', 'Linux', 'MongoDB'],
     },
     {
       icon: <FaLanguage />,

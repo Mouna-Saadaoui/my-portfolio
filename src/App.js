@@ -3,7 +3,8 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Layout from './Layout/Layout';
 import MobileLayout from './Layout/MobileLayout';
-import useIsMobile from './hooks/useIsMobile'; // ✅ import the hook
+import useIsMobile from './hooks/useIsMobile';
+import ScrollToTop from './ScrollToTop'; // ✅ Added scroll-to-top logic
 
 // Sections
 import HeroSection from './Home_Sections/HeroSection/HeroSection';
@@ -22,11 +23,11 @@ import AboutMePage from './AboutMePages/AboutMe';
 
 function App() {
   const isMobile = useIsMobile();
-
   const LayoutComponent = isMobile ? MobileLayout : Layout;
 
   return (
     <Router>
+      <ScrollToTop /> {/* Only triggers scroll on project pages */}
       <LayoutComponent>
         <div className="main-content">
           <Routes>
@@ -56,6 +57,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
